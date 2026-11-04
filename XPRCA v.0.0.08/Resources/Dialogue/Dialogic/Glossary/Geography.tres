@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" load_steps=2 format=3 uid="uid://fidht70s7w86"]
+
+[ext_resource type="Script" uid="uid://80elcodyqohb" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_dlmdc"]
+
+[resource]
+script = ExtResource("1_dlmdc")
+entries = {
+"Great Axillar": "Greater Axillar",
+"Greater Axillar": {
+"alternatives": ["Great Axillar"],
+"case_sensitive": true,
+"color": Color(0.68856966, 0.9355469, 0.5353813, 1),
+"name": "Greater Axillar",
+"text": "The outer border of the kingdom containing smaller villages, seed fields, and forests. Many areas are reachable through extended royal roads. Some villages border Wind-Lost areas.",
+"title": "Greater Axillar"
+},
+"The Trailing Edge": {
+"alternatives": ["the Trailing Edge"],
+"case_sensitive": true,
+"color": Color(0.503125, 0.8784314, 0.48627454, 1),
+"name": "The Trailing Edge",
+"text": "An area within Greater Axillar near the old Royal Road. Its history of being the home of a few prominent magicians is overshadowed by its growing obscurity in the face of growing instability within the kingdom.",
+"title": "Trailing Edge"
+},
+"the Trailing Edge": "The Trailing Edge"
+}

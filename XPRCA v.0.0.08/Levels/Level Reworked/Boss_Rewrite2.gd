@@ -3,7 +3,7 @@ extends Node2D
 @onready var tp_markers = $PosMarkers
 @onready var body = $BossBody
 @onready var attackhandler = $AttackHandler
-@onready var castinghandler = $CastingHandler
+@export var castinghandler : enemy_spellbubble
 @onready var arenamarkers = $ArenaMarkers
 @onready var arenaareas = $ArenaAreas
 var tempcounter: int = 2
@@ -131,4 +131,5 @@ func reset_areas_postion(time: float):
 # I think I"m satisfied for that right now. We can add the area next time. We have finally gotten our big milestone down!
 #yippie kay yay!!
 	
-		
+# I think I need to restart this whole part. I need to junk this code for scrap.
+# To review : State machines

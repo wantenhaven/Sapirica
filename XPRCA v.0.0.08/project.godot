@@ -35,6 +35,7 @@ PlayerInfo="*res://Autoloads/player_info.gd"
 SignalBus="*res://Autoloads/signal_bus.gd"
 PlayerSpeech="*res://Autoloads/player_speech.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+DialogueAutoload="*res://Autoloads/dialogue_autoload.gd"
 
 [debug]
 
@@ -51,7 +52,9 @@ directories/dtl_directory={
 "2ndFloor": "res://Resources/Dialogue/Dialogic/2ndFloor.dtl",
 "BossFight": "res://Resources/Dialogue/Dialogic/BossFight.dtl",
 "InitialCutscene": "res://Resources/Dialogue/Dialogic/InitialCutscene.dtl",
-"Intro": "res://Resources/Dialogue/Dialogic/Intro.dtl"
+"Intro": "res://Resources/Dialogue/Dialogic/Intro.dtl",
+"Passengers": "res://Resources/Dialogue/Dialogic/Passengers.dtl",
+"SharedCasting": "res://Resources/Dialogue/Dialogic/SharedCasting.dtl"
 }
 layout/style_directory={}
 variables={
@@ -65,7 +68,42 @@ variables={
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
-glossary/glossary_files=["uid://bhl802hwwmjix"]
+glossary/glossary_files=["uid://bhl802hwwmjix", "uid://fidht70s7w86", "uid://dlbap8jwoeokv", "uid://pchwkhjg13nl"]
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+history/simple_history_enabled=true
+history/simple_history_save=true
 
 [display]
 

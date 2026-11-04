@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=4 uid="uid://i17dejdi5wm7"]
+[gd_scene load_steps=27 format=4 uid="uid://i17dejdi5wm7"]
 
 [ext_resource type="Script" uid="uid://6qrc8sjba4ro" path="res://Levels/Level Reworked/WallsLevel.gd" id="1_46ghk"]
 [ext_resource type="PackedScene" uid="uid://bl0dlxrg1qk1n" path="res://Player/player_rewrite.tscn" id="2_3wxfi"]
 [ext_resource type="PackedScene" uid="uid://bkh3ujfhdvy0g" path="res://Resources/Tilemaps/torch.tscn" id="3_1ti4x"]
+[ext_resource type="Script" uid="uid://chb3b563wqloq" path="res://Levels/main/dialogueManager.gd" id="3_8gsp6"]
 [ext_resource type="Script" uid="uid://bpmq7ixtp6pw7" path="res://Levels/Level Reworked/dispellable_enemies_container.gd" id="5_2n46q"]
 [ext_resource type="TileSet" uid="uid://bvr80ykefb1v5" path="res://Resources/Tilemaps/base_tilemap.tres" id="5_81hn0"]
 [ext_resource type="Script" uid="uid://sbq7jlfywdqb" path="res://Levels/Level Reworked/fireplace.gd" id="5_cq0lh"]
@@ -93,11 +94,17 @@ collision_mask = 9
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position_smoothing_speed = 0.5
 
+[node name="Dialogue" type="SubViewport" parent="Player/Camera2D"]
+unique_name_in_owner = true
+handle_input_locally = false
+size = Vector2i(1200, 500)
+render_target_update_mode = 4
+script = ExtResource("3_8gsp6")
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 light_mask = 3
 visibility_layer = 3
-color = Color(0.364706, 0.364706, 0.364706, 1)
+color = Color(0.97083694, 0.9726208, 0.8344558, 1)
 
 [node name="Map" type="Node2D" parent="."]
 metadata/_edit_lock_ = true

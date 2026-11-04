@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddchqoam02a4p"]
+
+[ext_resource type="Texture2D" uid="uid://drqr5pa17qpyt" path="res://Levels/Minigame/progressbartexture.tres" id="1_ay4fp"]
+[ext_resource type="Script" uid="uid://yysclr24mwa1" path="res://Levels/Minigame/magic_bar.gd" id="2_vvtvd"]
+
+[node name="SharedCast" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MagicBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 527.0
+offset_right = 1117.0
+offset_bottom = 591.0
+step = 0.1
+value = 50.0
+texture_under = ExtResource("1_ay4fp")
+texture_progress = ExtResource("1_ay4fp")
+tint_under = Color(0.42352942, 0.36862746, 1, 1)
+tint_progress = Color(1, 0, 0, 1)
+script = ExtResource("2_vvtvd")

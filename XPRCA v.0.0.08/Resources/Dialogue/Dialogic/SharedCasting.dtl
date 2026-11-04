@@ -1,0 +1,23 @@
+join uncle leftmost [mirrored="true"]
+uncle: Let me show you how to do shared casting.
+join fescue rightmost
+fescue: Shared casting?
+uncle: Yes.
+uncle: I wouldn't know when you will be called for it, but I would rather you learn from me.
+uncle: Shared casting is rife for a young mage to be taken advantage of. Bone splintering is not the worst that could happen to you.
+uncle: I think you've heard about bone-dance?
+- The curse.
+	uncle: A terrible one.
+- The disease.
+	fescue: The disease.
+	uncle: A terrible disease.
+- ...
+	uncle: Well... You should learn where the animated bones come from...
+uncle: As you progress with training you should be aware of the dangers that come with your craft.
+uncle: Come now. Stand here.
+[wait time="1.0" skippable="true"]
+uncle: We shall chant an long enchantment to create light throughout the dungeon.
+uncle: Since I will be helping you, the spell can be cast either stronger or faster.
+uncle: As I chant, I want you to let my spell flow through you as well. Regulate the flow of it through [enter.]
+uncle: Now, breathe in. This might feel strange at first.
+fescue: *inhale*

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" load_steps=2 format=3 uid="uid://dlbap8jwoeokv"]
+
+[ext_resource type="Script" uid="uid://80elcodyqohb" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_iuypd"]
+
+[resource]
+script = ExtResource("1_iuypd")
+entries = {
+"Appirition Ritual": "The Appirition",
+"Bone-dance": {
+"alternatives": ["Dancing bones", "animated bones"],
+"case_sensitive": true,
+"color": Color(0.60784316, 0.6117647, 0.5529412, 1),
+"extra": "Many of the skeletons found in crypts are mages that have died of bone-dance.",
+"name": "Bone-dance",
+"text": "Involves a loss of control and involuntary contraction of one's bones, usually leading to crushed and punctured internal organs around the ribs area, due to an overwhelming curse upon the wearer that feeds on one's own magic.",
+"title": "Bone-dance disease"
+},
+"Dancing bones": "Bone-dance",
+"The Appirition": {
+"alternatives": ["Appirition Ritual", "the Reckoner"],
+"extra": "It is spoken in hush whispers, well known among children and old folktales. No one who should have gone through it claims to be able to describe what they have seen.",
+"name": "The Appirition",
+"text": "A kept secret of high mages. The price to pay for wielding magic.",
+"title": "The Appirition"
+},
+"animated bones": "Bone-dance",
+"the Reckoner": "The Appirition"
+}

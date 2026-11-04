@@ -1,10 +1,18 @@
-Fescue's small-town life dotted
-Spellwork was her love. A glimpse of the big city
-Magic institute
-<Empty Text Event>
+do PlayerInfo.enter_dilaogue(true)
+[background arg="#000000ff" fade="0.0"]
+A day in Fescue's small-town life in the hidden village nicknamed "The Trailing Edge," part of the Greater Axillar region.
+Spellwork was her love. A glimpse of the big city,
+A glimpse of the Magic Institute.
+[wait time="1.0" skippable="true"]
 join uncle center
 uncle: Ok, it is your turn n-now, Fescue.
-join fescue center
-fescue: Mmhm!
-uncle: Go do your warm-ups by the barrels. We'll go down once you're ready.
+join fescue left
+fescue: Mmhm.
+leave fescue
+uncle: Go do your w-warm-ups by the barrels. We'll go down once you're ready.
 uncle: If you need to review, just come to me.
+An deep unease wrests in the old man's heart. His dear student and niece has grown so much over the years.
+And now a reckoning gnaws at his bones, one that he could no longer keep at bay. His eyebrows furrow.
+uncle: I must prepare her... The Appirition is nigh...
+[background arg="#00000000" fade="0.2" wait="true"]
+do PlayerInfo.enter_dilaogue(false)

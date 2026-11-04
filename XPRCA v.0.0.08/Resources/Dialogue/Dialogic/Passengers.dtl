@@ -1,0 +1,48 @@
+fescue: ...
+fescue: ..!
+[wait time="1.0"]
+join detritus center [animation="Fade In" length="5.0" wait="true"]
+detritus: Hush now.
+detritus: If you dare speak of me,
+detritus: we both die.
+update detritus right [move_time="0.5"]
+join fescue leftmost
+fescue: What?
+detritus: That's my burden as a passenger.
+detritus: And your responsibility as the vehicle.
+label Explanation
+- What!?
+	detritus: ...
+	detritus: <Empty Text Event>
+	detritus: No one that desires this agreement gets it.
+	detritus: It is but karmic mockery.
+- Are you possessing me?
+	detritus: No.
+	detritus: You possess me, more like
+	detritus: I am merely stuck onto you until one or both of us perishes.
+	detritus: And I have already died once.
+- This must be a trick.
+	fescue: Why would no one have told me
+	detritus: ...
+	detritus: This is a truth that dies when said.
+- ...
+	jump Continuation
+jump Explanation
+label Continuation
+leave --All--
+join uncle leftmost [mirrored="true"]
+uncle: You are awake. Th-thank goodness.
+fescue: Uncle. I had the weirdest dream.
+join fescue center
+join detritus (Detritus_Small) right
+[wait time="1.0"]
+detritus: It is not a dream.
+detritus: It is but a bitter reality.
+fescue: ...
+uncle: ...
+uncle: That is but the effects of the Appirition.
+uncle: You need not fear him. Nor does he need to fear you.
+fescue: What is this? Will he be stuck a figment of my imagination forever?
+detritus: *scoff!*
+uncle: He is not a figment of your imagination. He is as r-real as the events that have happened yesterday.
+uncle: To think though... that you had gotten such a fiesty one as your first passenger. That m-must mean things ahead for you.

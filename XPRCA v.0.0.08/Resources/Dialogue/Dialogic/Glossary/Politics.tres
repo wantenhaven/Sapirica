@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" load_steps=2 format=3 uid="uid://pchwkhjg13nl"]
+
+[ext_resource type="Script" uid="uid://80elcodyqohb" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_17hfy"]
+
+[resource]
+script = ExtResource("1_17hfy")
+entries = {
+"Ministry of Magic. Ministry": "The Magic Ministry",
+"The Magic Ministry": {
+"alternatives": ["Ministry of Magic. Ministry"],
+"color": Color(0.27080536, 0.30978823, 0.89453125, 1),
+"name": "The Magic Ministry",
+"text": "The leading body on Magic studies and magical defense in Terazza. Their headquarters is located near the capital.",
+"title": "The Magic Ministry"
+}
+}
