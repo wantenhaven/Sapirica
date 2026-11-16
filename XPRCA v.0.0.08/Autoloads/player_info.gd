@@ -111,6 +111,8 @@ func player_status_changed():
 	if statuses.has(States.ROCK):
 		statuses.append(States.INVINCIBLE)
 		canmove = false
+		var rock_color := Color.GRAY # choose whatever color u want here
+		ChangeModulation.emit(rock_color)
 	else:
 		canmove = true
 
