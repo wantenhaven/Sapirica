@@ -23,7 +23,7 @@ func _ready() -> void:
 	
 	# connect signals from PlayerInfo:
 	PlayerInfo.TeleportSpell.connect(_teleport_player) ## NOTE: receiver function for this signal
-	#PlayerInfo.ChangeModulation.connect(_modulation)
+	PlayerInfo.ChangeModulation.connect(_modulation)
 	SignalBus.next_door_entered.connect(_on_next_door_entered)
 	## cannot initialize player health here since player gets re-instantiated once you transfer
 	## between levels
@@ -105,3 +105,7 @@ func _on_next_door_entered(_next_level_path: String) -> void:
 	# reset the location of aim_cursor
 	aim_target_pos = Vector2.ZERO
 	aim_cursor.global_position = global_position
+
+
+func _modulation() -> void:
+	sprite.modulate_player(color)
