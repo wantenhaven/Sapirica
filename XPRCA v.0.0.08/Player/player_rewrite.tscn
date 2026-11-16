@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://bl0dlxrg1qk1n"]
+[gd_scene load_steps=20 format=3 uid="uid://bl0dlxrg1qk1n"]
 
 [ext_resource type="Script" uid="uid://dah7hfgh0q7ao" path="res://Player/player_rewrite.gd" id="1_f2d4x"]
+[ext_resource type="Script" uid="uid://bjlffbrkln4ew" path="res://Player/sprites.gd" id="2_l0hey"]
 [ext_resource type="Texture2D" uid="uid://ceeatsthmnt54" path="res://Assets/Characters And Tiles/Characters/rogues.png" id="2_yijag"]
 [ext_resource type="Texture2D" uid="uid://c3kphbnrpc7ql" path="res://Resources/textures/movement_cursor.tres" id="3_c7vef"]
 [ext_resource type="Texture2D" uid="uid://qfhi4ehhqew6" path="res://Assets/Characters And Tiles/Environment/animated-tiles.png" id="3_l0hey"]
@@ -71,6 +72,7 @@ shape = SubResource("CapsuleShape2D_orysy")
 
 [node name="Sprites" type="Node2D" parent="."]
 position = Vector2(0.5, 0)
+script = ExtResource("2_l0hey")
 
 [node name="PlayerSprite" type="Sprite2D" parent="Sprites"]
 texture_filter = 1

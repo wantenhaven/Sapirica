@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cxhs8mky6mys5"]
+[gd_scene load_steps=13 format=3 uid="uid://cxhs8mky6mys5"]
 
 [ext_resource type="Script" uid="uid://wxv0a32810ay" path="res://Levels/main/main.gd" id="1_yeh0h"]
 [ext_resource type="Script" uid="uid://u3du5a3wppe1" path="res://Levels/main/SceneChanger.gd" id="2_64ct0"]
 [ext_resource type="PackedScene" uid="uid://bimkd41ouig5e" path="res://UI/main_ui/ingame_ui.tscn" id="2_ffheu"]
 [ext_resource type="PackedScene" uid="uid://cmku625mxhvvn" path="res://Spells/explosion_spell/fireball_rewrite.tscn" id="4_cvyq6"]
+[ext_resource type="PackedScene" uid="uid://cmq4g4q8uffd8" path="res://Spells/cleanse/cleanse.tscn" id="4_dwcgc"]
 [ext_resource type="PackedScene" uid="uid://bd2j8dwwrtd2y" path="res://Levels/main/game_over.tscn" id="4_fkct0"]
 [ext_resource type="PackedScene" uid="uid://dprtktnhtow1j" path="res://Spells/Effulgence/effulgence.tscn" id="7_waqyl"]
 [ext_resource type="PackedScene" uid="uid://drlj5p7tiypmf" path="res://Spells/magic_missile/magic_missile.tscn" id="8_3fjbr"]
@@ -54,6 +55,9 @@ visible = false
 unique_name_in_owner = true
 texture_filter = 1
 
+[node name="cleanse" parent="CanvasLayer/SubViewportContainer/SubViewport/SpellContainer" instance=ExtResource("4_dwcgc")]
+visible = false
+
 [node name="Fireball_rewrite" parent="CanvasLayer/SubViewportContainer/SubViewport/SpellContainer" instance=ExtResource("4_cvyq6")]
 visible = false
 title = "Explosion"
@@ -92,6 +96,7 @@ description = "Extends your vision into another area"
 visible = false
 
 [node name="rejuvenate" parent="CanvasLayer/SubViewportContainer/SubViewport/SpellContainer" instance=ExtResource("11_dwcgc")]
+visible = false
 
 [node name="ingame_ui" parent="CanvasLayer" instance=ExtResource("2_ffheu")]
 unique_name_in_owner = true

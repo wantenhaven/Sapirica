@@ -1,16 +1,17 @@
 extends Spell
 
-#@onready var player: Player = get_parent().get_parent().get_parent().get_parent().get_node("Player") ## Kait: Added this
+@onready var particles = $CPUParticles2D
 
-func _ready() -> void:
-	hide()
+# PARTICLE SPELLS DONT NEED TO BE HIDDEN
+#func _ready() -> void:
+#	hide()
 
 
 func cast_spell(target_pos: Vector2) -> void:
 	#player.position = target_pos
-	PlayerInfo.statuses.append(PlayerInfo.States.ROCK)
-	print("Player has status ROCK")
+	show()
+	PlayerInfo.statuses = []
 	print(PlayerInfo.statuses)
-
-func _on_lifetime_timeout() -> void:
-	hide()
+	self.global_position = PlayerInfo.player_pos
+	particles.emitting = true
+	PlayerInfo.player_status_changed()

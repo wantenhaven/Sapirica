@@ -31,7 +31,8 @@ var aim_target_pos: Vector2 ## used by spells that need aim
 """
 
 signal GlobalDialogue(currentdialogue) ## Used by dialogue overlay, currently not connected, see https://www.reddit.com/r/godot/comments/12b5e01/comment/lshj48k/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
-var indialogue: bool = true
+var canmove: bool = true
+var indialogue
 
 
 ## Motivation: 
@@ -106,6 +107,13 @@ func player_health_change(amount: int, type: int = 0):
 		player_health += amount
 		"""PLAY HEALED PARTICLE/SOUND"""
 
+func player_status_changed():
+	if statuses.has(States.ROCK):
+		statuses.append(States.INVINCIBLE)
+		canmove = false
+	else:
+		canmove = true
+
 func player_change_modulation(mod):
 	pass
 		
@@ -113,4 +121,5 @@ func player_change_modulation(mod):
 ## DIALOGIC LOCK
 
 func enter_dilaogue(isindialogue:bool):
+	canmove = !isindialogue
 	indialogue = isindialogue

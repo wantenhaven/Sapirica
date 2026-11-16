@@ -15,7 +15,7 @@ var smoothed_mouse_position: Vector2
 var speed: float = 200
 var sprint_speed: float = 350
 
-var indialogue: bool = true
+var canmove: bool = false
 
 func _ready() -> void:
 	movement_target_pos = global_position
@@ -51,9 +51,9 @@ func _physics_process(_delta: float) -> void:
 	aim_guide_loose.look_at(smoothed_mouse_position)
 	
 	#velocity = position.direction_to(movement_target_pos) * speed
-	indialogue = PlayerInfo.indialogue
+	canmove = PlayerInfo.canmove
 	
-	if indialogue == false:
+	if canmove == true:
 		# NOTE: the PlayerInfo.player_pos variable is intended to share the Player's global_position to other scripts
 		PlayerInfo.player_pos = global_position # You need the Player script to manually update the PlayerInfo autoload
 		

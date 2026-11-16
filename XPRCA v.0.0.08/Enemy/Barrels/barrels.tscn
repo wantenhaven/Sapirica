@@ -1,17 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbchwt1tklydy"]
+[gd_scene load_steps=5 format=3 uid="uid://dbchwt1tklydy"]
 
 [ext_resource type="Script" uid="uid://ypq7cawcuylf" path="res://Enemy/Barrels/barrels.gd" id="2_fb3mi"]
 [ext_resource type="Texture2D" uid="uid://7cqvb7a2g3o1" path="res://Assets/Characters And Tiles/Environment/tiles.png" id="2_j2s03"]
+[ext_resource type="PackedScene" uid="uid://dkmyihsnyob7p" path="res://Enemy/enemy_hurtbox.tscn" id="3_j2s03"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lbsvm"]
-radius = 9.0
-height = 28.0
+radius = 16.0
+height = 37.0
 
 [node name="barrel" type="CharacterBody2D"]
 light_mask = 3
 visibility_layer = 3
 motion_mode = 1
 script = ExtResource("2_fb3mi")
+respawnTime = 2.0
 max_speed = 70.0
 
 [node name="Healthbar" type="ProgressBar" parent="."]
@@ -43,3 +45,9 @@ use_parent_material = true
 texture = ExtResource("2_j2s03")
 region_enabled = true
 region_rect = Rect2(128, 544, 32, 32)
+
+[node name="EnemyHurtbox" parent="." instance=ExtResource("3_j2s03")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHurtbox"]
+position = Vector2(0, 0.5)
+shape = SubResource("CapsuleShape2D_lbsvm")

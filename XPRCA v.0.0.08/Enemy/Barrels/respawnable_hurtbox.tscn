@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://fe5ngw0g1x44"]
+
+[sub_resource type="GDScript" id="GDScript_tib5e"]
+script/source = "extends Area2D
+class_name Respawnalbe_Hurtbox
+
+signal health_changed()
+
+@onready var enemy: Respawnable = owner ## get a reference to parent
+@onready var col_shape: CollisionShape2D = $CollisionShape2D ## or possibly check for typos if the assert error pops up
+
+func _ready() -> void:
+	var warning_text: String = \"The enemy %s is missing a collision shape for its Hurtbox\" % enemy.name
+	assert(col_shape, warning_text)
+
+## NOTE: I rewrote this part since ideally, the node with 
+## the hitbox (spell or projectile) should be responsible for calling functions on the hurtbox (enemy)
+## as much as possible the hurtbox shouldnt have a reference to the hitbox unless the hitbox is complicated like SpellHitbox
+
+func receive_spell_effect(spell: Spell) -> void:
+	spell.spell_effect(enemy)
+
+
+func receive_damage(damage: float) -> void:
+	enemy.health -= damage
+	print(enemy.health)
+	emit_signal(\"health_changed\")
+
+func receive_melee_damage(damage: float) -> void:
+	enemy.health -= damage
+	
+"
+
+[node name="Respawnable_Hurtbox" type="Area2D"]
+script = SubResource("GDScript_tib5e")

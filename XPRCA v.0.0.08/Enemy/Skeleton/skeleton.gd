@@ -84,7 +84,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_enemy_hurtbox_health_changed() -> void:
-	healthBar.show()
+	if healthBar.visible == false:
+		healthBar.show()
 	healthBar.value = health
 
 

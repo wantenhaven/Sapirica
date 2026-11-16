@@ -10,7 +10,9 @@ func cast_spell(target_pos: Vector2) -> void:
 	#player.position = target_pos
 	PlayerInfo.statuses.append(PlayerInfo.States.ROCK)
 	print("Player has status ROCK")
+	PlayerInfo.player_status_changed()
 	print(PlayerInfo.statuses)
+	
 
 func _on_lifetime_timeout() -> void:
 	hide()
