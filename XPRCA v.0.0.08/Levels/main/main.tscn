@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cxhs8mky6mys5"]
+[gd_scene load_steps=14 format=3 uid="uid://cxhs8mky6mys5"]
 
 [ext_resource type="Script" uid="uid://wxv0a32810ay" path="res://Levels/main/main.gd" id="1_yeh0h"]
 [ext_resource type="Script" uid="uid://u3du5a3wppe1" path="res://Levels/main/SceneChanger.gd" id="2_64ct0"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dc502prk7b82g" path="res://Spells/teleport/teleport.tscn" id="9_iysua"]
 [ext_resource type="PackedScene" uid="uid://jwupxijdxqpo" path="res://Spells/rock_skin/rock_skin.tscn" id="10_08cvt"]
 [ext_resource type="PackedScene" uid="uid://bpf7x2yqjgg4v" path="res://Spells/rejuvenate/rejuvenate.tscn" id="11_dwcgc"]
+[ext_resource type="PackedScene" uid="uid://bfpy1qebbkv61" path="res://Spells/Barrier/barrier.tscn" id="12_jy1lx"]
 [ext_resource type="PackedScene" uid="uid://c2hb3gwneuox7" path="res://Spells/sight/sight.tscn" id="20_g8x7u"]
 
 [node name="Main" type="Control"]
@@ -97,6 +98,9 @@ visible = false
 
 [node name="rejuvenate" parent="CanvasLayer/SubViewportContainer/SubViewport/SpellContainer" instance=ExtResource("11_dwcgc")]
 visible = false
+
+[node name="barrier" parent="CanvasLayer/SubViewportContainer/SubViewport/SpellContainer" instance=ExtResource("12_jy1lx")]
+position = Vector2(488, 213)
 
 [node name="ingame_ui" parent="CanvasLayer" instance=ExtResource("2_ffheu")]
 unique_name_in_owner = true

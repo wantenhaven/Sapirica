@@ -19,6 +19,7 @@ height = 10
 [node name="effulgence" type="Node2D"]
 scale = Vector2(4, 4)
 script = ExtResource("1_rmvyj")
+description = "Creates a blinding, stunning light"
 
 [node name="Spell_hitbox" parent="." instance=ExtResource("2_wadps")]
 

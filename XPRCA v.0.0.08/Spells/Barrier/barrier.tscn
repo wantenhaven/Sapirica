@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfpy1qebbkv61"]
+
+[ext_resource type="Script" uid="uid://bqdynq2fqyb5u" path="res://Spells/Barrier/barrier.gd" id="1_5r2la"]
+
+[sub_resource type="Gradient" id="Gradient_sraoc"]
+offsets = PackedFloat32Array(0, 0.6166667, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.87058824, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bgo17"]
+gradient = SubResource("Gradient_sraoc")
+width = 24
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kb6iv"]
+size = Vector2(24, 64)
+
+[node name="barrier" type="Node2D"]
+script = ExtResource("1_5r2la")
+title = "Sulice"
+spell_tag = 1
+incantation = "obiectaculum es ibi"
+description = "Creates a static magical barrier
+"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-41, 0)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = SubResource("GradientTexture2D_bgo17")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_kb6iv")
